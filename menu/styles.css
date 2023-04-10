@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #1b1b1b;
+    backdrop-filter: blur(1px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.navbar {
+        position: relative;
+        height: 130px;
+        width: 600px;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background: url('src/pexels-kseniya-lapteva-9175713.jpg');
+        background-size: cover;
+        
+        
+    }
+
+.navbar ul {
+    position: relative;
+    display: flex;
+}
+
+.navbar ul li {
+    position: relative;
+    list-style-type: none;
+}
+
+.navbar ul li a {
+    position: relative;
+    height: 120px;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.navbar ul li a i { 
+    color: #000000;
+    font-size: 42px;
+    position: absolute;
+}
+
+.activeIcon {
+    opacity: 0;
+    transition: all 0.6s ease;
+    transition-delay: 0.2;
+}
+
+.navbar ul li.active-list a i {
+    opacity: 1;
+}
+
+.indicator {
+    position: absolute;
+    bottom: -19px;
+    left: 34px;
+    width: 25px;
+    height: 36px;
+    background:#000000;
+    border-radius: 100%;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.indicator::before {
+    content: "";
+    position: absolute;
+    left: -14px;
+    bottom: 50%;
+    height: 22px;
+    width: 20px;
+    background: rgba(0, 0, 0, 0);
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 10px 0 #000000;
+}
+
+.indicator::after {
+    content: "";
+    position: absolute;
+    right: -15px;
+    bottom: 50%;
+    height: 22px;
+    width: 20px;
+    background: rgba(255, 255, 255, 0);
+    border-bottom-left-radius: 20px;
+    box-shadow: 0 10px 0 #000000;
+}
